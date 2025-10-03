@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-     const [targetNumber, setTargetNumber] = useState<number>(Math.floor(Math.random() * 100) + 1);
-     console.log(targetNumber);
 
 export default function Game() {
 
   const [guessNum, setNum] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const navigate = useNavigate();
+  const [targetNumber, setTargetNumber] = useState<number>(Math.floor(Math.random() * 100) + 1);
+  console.log(targetNumber);
 
   const checkLuck = () : void => {
     const guess = Number(guessNum);
